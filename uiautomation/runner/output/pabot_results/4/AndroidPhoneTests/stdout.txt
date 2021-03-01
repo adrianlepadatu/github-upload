@@ -1,0 +1,34 @@
+==============================================================================
+AndroidPhoneTests                                                             
+==============================================================================
+Startup                                                               | PASS |
+------------------------------------------------------------------------------
+Allow Permissions                                                     | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+------------------------------------------------------------------------------
+Click Start                                                           | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+------------------------------------------------------------------------------
+Click Login                                                           | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+------------------------------------------------------------------------------
+Click Restart                                                         | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+------------------------------------------------------------------------------
+H02 Select New Twnnant H02                                            | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+------------------------------------------------------------------------------
+Select text&voice input method                                        | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+------------------------------------------------------------------------------
+Populate history                                                      | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+------------------------------------------------------------------------------
+HD01 Long press on a conversation item + Delete button                | FAIL |
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+------------------------------------------------------------------------------
+AndroidPhoneTests                                                     | FAIL |
+9 critical tests, 1 passed, 8 failed
+9 tests total, 1 passed, 8 failed
+==============================================================================
+Output:  /Users/muthabor/eclipse-workspace/uiautomation/runner/output/pabot_results/4/AndroidPhoneTests/output.xml

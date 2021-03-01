@@ -1,0 +1,34 @@
+==============================================================================
+AndroidPhoneTests                                                             
+==============================================================================
+Startup                                                               | PASS |
+------------------------------------------------------------------------------
+Allow Permissions                                                     | FAIL |
+Execution terminated by signal
+------------------------------------------------------------------------------
+Click Start                                                           | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Click Login                                                           | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Click Restart                                                         | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+H02 Select New Twnnant H02                                            | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Select text&voice input method                                        | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+Populate history                                                      | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+HD01 Long press on a conversation item + Delete button                | FAIL |
+Test execution stopped due to a fatal error.
+------------------------------------------------------------------------------
+AndroidPhoneTests                                                     | FAIL |
+9 critical tests, 1 passed, 8 failed
+9 tests total, 1 passed, 8 failed
+==============================================================================
+Output:  /Users/muthabor/eclipse-workspace/uiautomation/runner/output/pabot_results/1/AndroidPhoneTests/output.xml

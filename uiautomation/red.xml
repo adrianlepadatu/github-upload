@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <robotExecEnvironment path="/usr/local/bin" interpreter="Python3"/>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="AppiumLibrary" path="/Users/muthabor/Library/Python/3.7/lib/python/site-packages/AppiumLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="Util" path="uiautomation/Util.py" dynamic="false"/>
+    <pythonpath>
+        <path location="/usr/local/opt/python/bin/"/>
+    </pythonpath>
+    <classpath/>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+</projectConfiguration>

@@ -1,0 +1,28 @@
+==============================================================================
+AndroidPhoneTests                                                             
+==============================================================================
+Startup                                                               | PASS |
+------------------------------------------------------------------------------
+Allow Permissions                                                     | PASS |
+------------------------------------------------------------------------------
+Click Start                                                           | PASS |
+------------------------------------------------------------------------------
+Click Login                                                           | PASS |
+------------------------------------------------------------------------------
+Click Restart                                                         | PASS |
+------------------------------------------------------------------------------
+H02 Select New Twnnant H02                                            | PASS |
+------------------------------------------------------------------------------
+Select text&voice input method                                        | PASS |
+------------------------------------------------------------------------------
+Populate history                                                      | FAIL |
+InvalidElementStateException: Message: Cannot set the element to 'Quelle est la meteo ce soir a Paris ?'. Did you interact with the correct element?
+------------------------------------------------------------------------------
+HD01 Long press on a conversation item + Delete button                | FAIL |
+Element 'xpath=//android.widget.TextView[2][@resource-id='com.vpaas.sdks.smartvoicekitapp.screens.conversation:id/tv_action_text']' did not appear in 5 seconds
+------------------------------------------------------------------------------
+AndroidPhoneTests                                                     | FAIL |
+9 critical tests, 7 passed, 2 failed
+9 tests total, 7 passed, 2 failed
+==============================================================================
+Output:  /Users/muthabor/eclipse-workspace/uiautomation/runner/output/pabot_results/3/AndroidPhoneTests/output.xml

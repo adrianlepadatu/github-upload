@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20201119 10:57:11.481" generator="Rebot 3.2.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/muthabor/eclipse-workspace/uiautomation/AndroidPhoneTests.robot" id="s1" name="AndroidPhoneTests">
+<test id="s1-t1" name="Startup">
+<kw name="Launch App" library="General">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Start ${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:21.426" level="INFO">Start SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:21.426" starttime="20201119 10:55:21.398"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://127.0.0.1:${appium}/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=${name}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>udid=${udid}</arg>
+<arg>appActivity=${MainActivity}</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:38.884" starttime="20201119 10:55:21.429"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>End of startup:${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:38.884" level="INFO">End of startup:SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:38.884" starttime="20201119 10:55:38.884"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201119 10:55:43.886" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20201119 10:55:43.886" starttime="20201119 10:55:38.885"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>End of startup:${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:43.887" level="INFO">End of startup:SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:43.887" starttime="20201119 10:55:43.886"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:43.887" starttime="20201119 10:55:21.398"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:55:43.887" critical="yes" starttime="20201119 10:55:21.397"></status>
+</test>
+<test id="s1-t2" name="Allow Permissions">
+<kw name="Click_ALLOW_Allow" library="General">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<assign>
+<var>${ALLOW}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:45.046" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="AndroidPhoneTests-appium-screenshot-1.png"&gt;&lt;img src="AndroidPhoneTests-appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201119 10:55:45.046" starttime="20201119 10:55:44.002"></status>
+</kw>
+<msg timestamp="20201119 10:55:45.047" level="FAIL">ValueError: Element locator 'xpath=//android.widget.Button[@text='ALLOW']' did not match any elements.</msg>
+<status status="FAIL" endtime="20201119 10:55:45.047" starttime="20201119 10:55:43.888"></status>
+</kw>
+<msg timestamp="20201119 10:55:45.047" level="INFO">${ALLOW} = False</msg>
+<status status="PASS" endtime="20201119 10:55:45.047" starttime="20201119 10:55:43.888"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${ALLOW}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:45.048" starttime="20201119 10:55:45.048"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<assign>
+<var>${Allow}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:45.168" starttime="20201119 10:55:45.048"></status>
+</kw>
+<msg timestamp="20201119 10:55:45.168" level="INFO">${Allow} = True</msg>
+<status status="PASS" endtime="20201119 10:55:45.168" starttime="20201119 10:55:45.048"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Allow}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:45.170" level="INFO">Clicking element 'xpath=//android.widget.Button[@text='Allow']'.</msg>
+<status status="PASS" endtime="20201119 10:55:45.251" starttime="20201119 10:55:45.169"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:45.251" starttime="20201119 10:55:45.169"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:45.251" starttime="20201119 10:55:43.888"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:55:45.252" critical="yes" starttime="20201119 10:55:43.887"></status>
+</test>
+<test id="s1-t3" name="Click Start">
+<kw name="ClickDjingo" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/activityAuthentication_loginButtonOrange']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:45.950" starttime="20201119 10:55:45.253"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/activityAuthentication_loginButtonOrange']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:45.952" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/activityAuthentication_loginButtonOrange']'.</msg>
+<status status="PASS" endtime="20201119 10:55:46.029" starttime="20201119 10:55:45.950"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:46.030" starttime="20201119 10:55:45.252"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:55:46.030" critical="yes" starttime="20201119 10:55:45.252"></status>
+</test>
+<test id="s1-t4" name="Click Login">
+<kw name="Login" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_login_editext']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:47.527" starttime="20201119 10:55:46.031"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_login_editext']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:47.529" level="INFO">Clicking element 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_login_editext']'.</msg>
+<status status="PASS" endtime="20201119 10:55:47.616" starttime="20201119 10:55:47.528"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_login_editext']</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:47.617" level="INFO">Typing text 'ols.test102@gmail.com' into text field 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_login_editext']'</msg>
+<status status="PASS" endtime="20201119 10:55:48.834" starttime="20201119 10:55:47.616"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/was_sdk_login_button_resume']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:48.835" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_login_button_resume']'.</msg>
+<status status="PASS" endtime="20201119 10:55:50.162" starttime="20201119 10:55:48.834"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_smartauthent_explicit_id_password']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:52.001" starttime="20201119 10:55:50.162"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_smartauthent_explicit_id_password']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:52.002" level="INFO">Clicking element 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_smartauthent_explicit_id_password']'.</msg>
+<status status="PASS" endtime="20201119 10:55:52.102" starttime="20201119 10:55:52.001"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_smartauthent_explicit_id_password']</arg>
+<arg>${passwd}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:52.103" level="INFO">Typing text 'QAZxsw123!' into text field 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_smartauthent_explicit_id_password']'</msg>
+<status status="PASS" endtime="20201119 10:55:53.885" starttime="20201119 10:55:52.102"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/was_sdk_button_confirm']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:53.886" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_button_confirm']'.</msg>
+<status status="PASS" endtime="20201119 10:55:54.571" starttime="20201119 10:55:53.885"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:54.572" starttime="20201119 10:55:46.030"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201119 10:55:57.575" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20201119 10:55:57.575" starttime="20201119 10:55:54.573"></status>
+</kw>
+<kw name="Click_ALLOW_Allow" library="General">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<assign>
+<var>${ALLOW}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:58.222" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="AndroidPhoneTests-appium-screenshot-2.png"&gt;&lt;img src="AndroidPhoneTests-appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20201119 10:55:58.222" starttime="20201119 10:55:57.628"></status>
+</kw>
+<msg timestamp="20201119 10:55:58.222" level="FAIL">ValueError: Element locator 'xpath=//android.widget.Button[@text='ALLOW']' did not match any elements.</msg>
+<status status="FAIL" endtime="20201119 10:55:58.223" starttime="20201119 10:55:57.576"></status>
+</kw>
+<msg timestamp="20201119 10:55:58.223" level="INFO">${ALLOW} = False</msg>
+<status status="PASS" endtime="20201119 10:55:58.223" starttime="20201119 10:55:57.576"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${ALLOW}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:58.223" starttime="20201119 10:55:58.223"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<assign>
+<var>${Allow}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:58.322" starttime="20201119 10:55:58.223"></status>
+</kw>
+<msg timestamp="20201119 10:55:58.322" level="INFO">${Allow} = True</msg>
+<status status="PASS" endtime="20201119 10:55:58.322" starttime="20201119 10:55:58.223"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Allow}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='Allow']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:58.327" level="INFO">Clicking element 'xpath=//android.widget.Button[@text='Allow']'.</msg>
+<status status="PASS" endtime="20201119 10:55:58.406" starttime="20201119 10:55:58.324"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:58.406" starttime="20201119 10:55:58.323"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:58.406" starttime="20201119 10:55:57.575"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:55:58.407" critical="yes" starttime="20201119 10:55:46.030"></status>
+</test>
+<test id="s1-t5" name="Click Restart">
+<kw name="Restart" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='android:id/button2']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:00.594" starttime="20201119 10:55:58.408"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='android:id/button2']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:00.595" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='android:id/button2']'.</msg>
+<status status="PASS" endtime="20201119 10:56:00.717" starttime="20201119 10:56:00.594"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:00.717" starttime="20201119 10:55:58.407"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:56:00.717" critical="yes" starttime="20201119 10:55:58.407"></status>
+</test>
+<test id="s1-t6" name="H02 Select New Twnnant H02">
+<kw name="SelectNewTennant" library="General">
+<kw name="Click Menu icon" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_drawer']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:00.973" starttime="20201119 10:56:00.718"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_drawer']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:00.974" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/bottom_nav_drawer']'.</msg>
+<status status="PASS" endtime="20201119 10:56:01.474" starttime="20201119 10:56:00.973"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:01.474" starttime="20201119 10:56:00.718"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.CheckedTextView[@text='Settings']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:02.613" starttime="20201119 10:56:01.474"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.CheckedTextView[@text='Settings']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:02.614" level="INFO">Clicking element 'xpath=//android.widget.CheckedTextView[@text='Settings']'.</msg>
+<status status="PASS" endtime="20201119 10:56:02.763" starttime="20201119 10:56:02.613"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Server / Tenant']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:04.008" starttime="20201119 10:56:02.763"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Server / Tenant']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:04.010" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Server / Tenant']'.</msg>
+<status status="PASS" endtime="20201119 10:56:04.105" starttime="20201119 10:56:04.008"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>MVP Staging 002</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:05.316" starttime="20201119 10:56:04.105"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.view.ViewGroup[3]/android.widget.RadioButton</arg>
+</arguments>
+<msg timestamp="20201119 10:56:05.318" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[3]/android.widget.RadioButton'.</msg>
+<status status="PASS" endtime="20201119 10:56:05.470" starttime="20201119 10:56:05.316"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='android:id/button3']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:06.328" starttime="20201119 10:56:05.470"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='android:id/button3']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:06.330" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='android:id/button3']'.</msg>
+<status status="PASS" endtime="20201119 10:56:06.442" starttime="20201119 10:56:06.328"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/activityAuthentication_loginButtonOrange']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:10.489" starttime="20201119 10:56:06.442"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/activityAuthentication_loginButtonOrange']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:10.491" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/activityAuthentication_loginButtonOrange']'.</msg>
+<status status="PASS" endtime="20201119 10:56:10.563" starttime="20201119 10:56:10.490"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_login_editext']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:11.873" starttime="20201119 10:56:10.564"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_login_editext']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:11.875" level="INFO">Clicking element 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_login_editext']'.</msg>
+<status status="PASS" endtime="20201119 10:56:11.962" starttime="20201119 10:56:11.874"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_login_editext']</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201119 10:56:11.964" level="INFO">Typing text 'ols.test102@gmail.com' into text field 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_login_editext']'</msg>
+<status status="PASS" endtime="20201119 10:56:13.749" starttime="20201119 10:56:11.962"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/was_sdk_login_button_resume']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:13.751" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_login_button_resume']'.</msg>
+<status status="PASS" endtime="20201119 10:56:14.540" starttime="20201119 10:56:13.750"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_smartauthent_explicit_id_password']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:16.098" starttime="20201119 10:56:14.540"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_smartauthent_explicit_id_password']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:16.099" level="INFO">Clicking element 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_smartauthent_explicit_id_password']'.</msg>
+<status status="PASS" endtime="20201119 10:56:16.190" starttime="20201119 10:56:16.098"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_smartauthent_explicit_id_password']</arg>
+<arg>${passwd}</arg>
+</arguments>
+<msg timestamp="20201119 10:56:16.195" level="INFO">Typing text 'QAZxsw123!' into text field 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_smartauthent_explicit_id_password']'</msg>
+<status status="PASS" endtime="20201119 10:56:17.781" starttime="20201119 10:56:16.192"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/was_sdk_button_confirm']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:17.783" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/was_sdk_button_confirm']'.</msg>
+<status status="PASS" endtime="20201119 10:56:18.412" starttime="20201119 10:56:17.781"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:18.413" starttime="20201119 10:56:00.718"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:56:18.413" critical="yes" starttime="20201119 10:56:00.717"></status>
+</test>
+<test id="s1-t7" name="Select text&amp;voice input method">
+<kw name="Click Menu icon" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_drawer']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:24.602" starttime="20201119 10:56:18.414"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_drawer']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:24.603" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/bottom_nav_drawer']'.</msg>
+<status status="PASS" endtime="20201119 10:56:24.932" starttime="20201119 10:56:24.602"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:24.932" starttime="20201119 10:56:18.414"></status>
+</kw>
+<kw name="Click Settings" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.CheckedTextView[@text='Settings']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:25.308" starttime="20201119 10:56:24.933"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.CheckedTextView[@text='Settings']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:25.310" level="INFO">Clicking element 'xpath=//android.widget.CheckedTextView[@text='Settings']'.</msg>
+<status status="PASS" endtime="20201119 10:56:26.116" starttime="20201119 10:56:25.308"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:26.116" starttime="20201119 10:56:24.933"></status>
+</kw>
+<kw name="Click Conversation" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Conversation']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:26.374" starttime="20201119 10:56:26.117"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Conversation']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:26.376" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Conversation']'.</msg>
+<status status="PASS" endtime="20201119 10:56:27.350" starttime="20201119 10:56:26.375"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:27.350" starttime="20201119 10:56:26.116"></status>
+</kw>
+<kw name="Click Select input method" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Select input method']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:27.764" starttime="20201119 10:56:27.351"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='Select input method']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:27.766" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Select input method']'.</msg>
+<status status="PASS" endtime="20201119 10:56:28.298" starttime="20201119 10:56:27.764"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:28.298" starttime="20201119 10:56:27.350"></status>
+</kw>
+<kw name="Click Text &amp; Audio input" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.CheckedTextView[@text='Text &amp; Audio input']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:28.450" starttime="20201119 10:56:28.299"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.CheckedTextView[@text='Text &amp; Audio input']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:28.451" level="INFO">Clicking element 'xpath=//android.widget.CheckedTextView[@text='Text &amp; Audio input']'.</msg>
+<status status="PASS" endtime="20201119 10:56:29.878" starttime="20201119 10:56:28.450"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:29.878" starttime="20201119 10:56:28.298"></status>
+</kw>
+<kw name="Return to menu" library="General">
+<doc>Hardware keys KeyCodes BACK = 4 MENU = 82 APP_SWITCH=187 (dec values)</doc>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:29.920" starttime="20201119 10:56:29.879"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20201119 10:56:30.421" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20201119 10:56:30.421" starttime="20201119 10:56:29.920"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:30.559" starttime="20201119 10:56:30.421"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20201119 10:56:31.060" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20201119 10:56:31.060" starttime="20201119 10:56:30.559"></status>
+</kw>
+<kw name="Click Home icon" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_conversation']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:31.542" starttime="20201119 10:56:31.061"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_conversation']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:31.545" level="INFO">Clicking element 'xpath=//android.widget.FrameLayout[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/bottom_nav_conversation']'.</msg>
+<status status="PASS" endtime="20201119 10:56:31.771" starttime="20201119 10:56:31.543"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:31.771" starttime="20201119 10:56:31.060"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20201119 10:56:32.272" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20201119 10:56:32.272" starttime="20201119 10:56:31.771"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:32.273" starttime="20201119 10:56:29.878"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:56:32.273" critical="yes" starttime="20201119 10:56:18.414"></status>
+</test>
+<test id="s1-t8" name="Populate history">
+<kw name="Input text in history" library="General">
+<arguments>
+<arg>Quelle est la température dans Berlin ?</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/et_user_input']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:32.904" starttime="20201119 10:56:32.274"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/et_user_input']</arg>
+<arg>${charstr}</arg>
+</arguments>
+<msg timestamp="20201119 10:56:32.906" level="INFO">Typing text 'Quelle est la température dans Berlin ?' into text field 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/et_user_input']'</msg>
+<status status="PASS" endtime="20201119 10:56:33.754" starttime="20201119 10:56:32.905"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.ImageButton[@resource-id='${appPackage}:id/btn_send_text']</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:33.922" starttime="20201119 10:56:33.754"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.ImageButton[@resource-id='${appPackage}:id/btn_send_text']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:33.923" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/btn_send_text']'.</msg>
+<status status="PASS" endtime="20201119 10:56:34.561" starttime="20201119 10:56:33.922"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:34.561" starttime="20201119 10:56:32.274"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201119 10:56:37.562" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20201119 10:56:37.562" starttime="20201119 10:56:34.562"></status>
+</kw>
+<kw name="Wait for reply" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@resource-id='${appPackage}:id/text_response_tv_message']</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:37.967" starttime="20201119 10:56:37.563"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@resource-id='${appPackage}:id/text_response_tv_message']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:37.967" level="INFO">xpath=//android.widget.TextView[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/text_response_tv_message']</msg>
+<status status="PASS" endtime="20201119 10:56:37.967" starttime="20201119 10:56:37.967"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:37.968" starttime="20201119 10:56:37.563"></status>
+</kw>
+<kw name="Input text in history" library="General">
+<arguments>
+<arg>Quelle est la meteo ce soir a Paris ?</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/et_user_input']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:38.138" starttime="20201119 10:56:37.968"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/et_user_input']</arg>
+<arg>${charstr}</arg>
+</arguments>
+<msg timestamp="20201119 10:56:38.140" level="INFO">Typing text 'Quelle est la meteo ce soir a Paris ?' into text field 'xpath=//android.widget.EditText[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/et_user_input']'</msg>
+<status status="PASS" endtime="20201119 10:56:38.884" starttime="20201119 10:56:38.138"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.ImageButton[@resource-id='${appPackage}:id/btn_send_text']</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:39.089" starttime="20201119 10:56:38.884"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.ImageButton[@resource-id='${appPackage}:id/btn_send_text']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:39.090" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/btn_send_text']'.</msg>
+<status status="PASS" endtime="20201119 10:56:39.764" starttime="20201119 10:56:39.089"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:39.764" starttime="20201119 10:56:37.968"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201119 10:56:42.765" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20201119 10:56:42.765" starttime="20201119 10:56:39.765"></status>
+</kw>
+<kw name="Wait for reply" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@resource-id='${appPackage}:id/text_response_tv_message']</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:43.526" starttime="20201119 10:56:42.766"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@resource-id='${appPackage}:id/text_response_tv_message']</arg>
+</arguments>
+<msg timestamp="20201119 10:56:43.526" level="INFO">xpath=//android.widget.TextView[@resource-id='com.vpaas.sdks.smartvoicekitapp:id/text_response_tv_message']</msg>
+<status status="PASS" endtime="20201119 10:56:43.526" starttime="20201119 10:56:43.526"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:43.527" starttime="20201119 10:56:42.765"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:43.527" critical="yes" starttime="20201119 10:56:32.273"></status>
+</test>
+<test id="s1-t9" name="HD01 Long press on a conversation item + Delete button">
+<kw name="Long click conversation item" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@resource-id='${appPackage}:id/text_response_tv_message']</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:43.674" starttime="20201119 10:56:43.528"></status>
+</kw>
+<kw name="Long Press" library="AppiumLibrary">
+<doc>Long press the element with optional duration</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@resource-id='${appPackage}:id/text_response_tv_message']</arg>
+<arg>3s</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:56:45.389" starttime="20201119 10:56:43.674"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:56:45.390" starttime="20201119 10:56:43.528"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.LinearLayout[@resource-id='${appPackage}:id/contextual_menu_delete']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" endtime="20201119 10:57:11.047" starttime="20201119 10:57:11.046"></status>
+</kw>
+<msg timestamp="20201119 10:57:11.052" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" endtime="20201119 10:57:11.054" starttime="20201119 10:56:45.390"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:57:11.061" critical="yes" starttime="20201119 10:56:43.527">Execution terminated by signal</status>
+</test>
+<status status="FAIL" endtime="20201119 10:57:11.067" starttime="20201119 10:55:20.659"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="8">Critical Tests</stat>
+<stat fail="1" pass="8">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="7">Android</stat>
+<stat fail="0" pass="6">NR</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="AndroidPhoneTests" pass="8">AndroidPhoneTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20201119 10:57:11.052" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>

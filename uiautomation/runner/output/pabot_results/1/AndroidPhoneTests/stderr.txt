@@ -1,0 +1,2 @@
+Second signal will force exit.
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal

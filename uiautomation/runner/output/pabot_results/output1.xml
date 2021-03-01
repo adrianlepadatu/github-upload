@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20201119 10:57:11.386" generator="Rebot 3.2.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/muthabor/eclipse-workspace/uiautomation/AndroidPhoneTests.robot" id="s1" name="AndroidPhoneTests">
+<test id="s1-t1" name="Startup">
+<kw name="Launch App" library="General">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Start ${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:21.246" level="INFO">Start SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:21.247" starttime="20201119 10:55:21.246"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://127.0.0.1:${appium}/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=${name}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>udid=${udid}</arg>
+<arg>appActivity=${MainActivity}</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:35.909" starttime="20201119 10:55:21.247"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>End of startup:${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:35.910" level="INFO">End of startup:SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:35.910" starttime="20201119 10:55:35.909"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201119 10:55:40.913" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20201119 10:55:40.913" starttime="20201119 10:55:35.910"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>End of startup:${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:40.913" level="INFO">End of startup:SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:40.914" starttime="20201119 10:55:40.913"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:40.914" starttime="20201119 10:55:21.244"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:55:40.914" critical="yes" starttime="20201119 10:55:21.243"></status>
+</test>
+<test id="s1-t2" name="Allow Permissions">
+<kw name="Click_ALLOW_Allow" library="General">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<assign>
+<var>${ALLOW}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" endtime="20201119 10:57:11.071" starttime="20201119 10:57:11.071"></status>
+</kw>
+<msg timestamp="20201119 10:57:11.073" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" endtime="20201119 10:57:11.074" starttime="20201119 10:55:40.916"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:57:11.074" starttime="20201119 10:55:40.916"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:57:11.074" starttime="20201119 10:55:40.915"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.074" critical="yes" starttime="20201119 10:55:40.915">Execution terminated by signal</status>
+</test>
+<test id="s1-t3" name="Click Start">
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.075" critical="yes" starttime="20201119 10:57:11.075">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t4" name="Click Login">
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.076" critical="yes" starttime="20201119 10:57:11.076">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t5" name="Click Restart">
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.078" critical="yes" starttime="20201119 10:57:11.077">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t6" name="H02 Select New Twnnant H02">
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.079" critical="yes" starttime="20201119 10:57:11.078">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t7" name="Select text&amp;voice input method">
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.080" critical="yes" starttime="20201119 10:57:11.080">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t8" name="Populate history">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.082" critical="yes" starttime="20201119 10:57:11.081">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t9" name="HD01 Long press on a conversation item + Delete button">
+<tags>
+<tag>robot:exit</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:57:11.084" critical="yes" starttime="20201119 10:57:11.083">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" endtime="20201119 10:57:11.085" starttime="20201119 10:55:20.591"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="8" pass="1">Critical Tests</stat>
+<stat fail="8" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="6" pass="1">Android</stat>
+<stat fail="5" pass="1">NR</stat>
+<stat fail="7" pass="0">robot:exit</stat>
+</tag>
+<suite>
+<stat fail="8" id="s1" name="AndroidPhoneTests" pass="1">AndroidPhoneTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20201119 10:57:11.073" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>

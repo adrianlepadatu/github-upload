@@ -1,0 +1,10 @@
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: No application is open

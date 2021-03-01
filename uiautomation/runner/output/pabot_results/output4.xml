@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20201119 10:57:11.458" generator="Rebot 3.2.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/muthabor/eclipse-workspace/uiautomation/AndroidPhoneTests.robot" id="s1" name="AndroidPhoneTests">
+<test id="s1-t1" name="Startup">
+<kw name="Launch App" library="General">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Start ${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:21.397" level="INFO">Start SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:21.397" starttime="20201119 10:55:21.396"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://127.0.0.1:${appium}/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=${name}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>udid=${udid}</arg>
+<arg>appActivity=${MainActivity}</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:35.868" starttime="20201119 10:55:21.397"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>End of startup:${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:35.869" level="INFO">End of startup:SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:35.869" starttime="20201119 10:55:35.869"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201119 10:55:40.871" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20201119 10:55:40.871" starttime="20201119 10:55:35.870"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>End of startup:${AppName}</arg>
+</arguments>
+<msg timestamp="20201119 10:55:40.872" level="INFO">End of startup:SmartVoiceKit Demo</msg>
+<status status="PASS" endtime="20201119 10:55:40.872" starttime="20201119 10:55:40.871"></status>
+</kw>
+<status status="PASS" endtime="20201119 10:55:40.872" starttime="20201119 10:55:21.396"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="PASS" endtime="20201119 10:55:40.872" critical="yes" starttime="20201119 10:55:21.395"></status>
+</test>
+<test id="s1-t2" name="Allow Permissions">
+<kw name="Click_ALLOW_Allow" library="General">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<assign>
+<var>${ALLOW}</var>
+</assign>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<status status="PASS" endtime="20201119 10:55:41.142" starttime="20201119 10:55:40.873"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.143" level="INFO">${ALLOW} = True</msg>
+<status status="PASS" endtime="20201119 10:55:41.143" starttime="20201119 10:55:40.873"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${ALLOW}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@text='ALLOW']</arg>
+</arguments>
+<msg timestamp="20201119 10:55:41.145" level="INFO">Clicking element 'xpath=//android.widget.Button[@text='ALLOW']'.</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.265" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.266" starttime="20201119 10:55:41.255"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.268" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.270" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.270" starttime="20201119 10:55:41.143"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.270" starttime="20201119 10:55:41.143"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.271" starttime="20201119 10:55:40.873"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:55:41.271" critical="yes" starttime="20201119 10:55:40.873">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+</status>
+</test>
+<test id="s1-t3" name="Click Start">
+<kw name="ClickDjingo" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='${appPackage}:id/activityAuthentication_loginButtonOrange']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.288" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.288" starttime="20201119 10:55:41.281"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.290" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.291" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.291" starttime="20201119 10:55:41.273"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.291" starttime="20201119 10:55:41.272"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:55:41.291" critical="yes" starttime="20201119 10:55:41.271">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</status>
+</test>
+<test id="s1-t4" name="Click Login">
+<kw name="Login" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/was_sdk_login_editext']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.362" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.362" starttime="20201119 10:55:41.304"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.366" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.369" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.369" starttime="20201119 10:55:41.293"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.369" starttime="20201119 10:55:41.293"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:55:41.370" critical="yes" starttime="20201119 10:55:41.292">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</status>
+</test>
+<test id="s1-t5" name="Click Restart">
+<kw name="Restart" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.Button[@resource-id='android:id/button2']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.442" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.442" starttime="20201119 10:55:41.427"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.445" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.447" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.447" starttime="20201119 10:55:41.372"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.447" starttime="20201119 10:55:41.371"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:55:41.448" critical="yes" starttime="20201119 10:55:41.370">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</status>
+</test>
+<test id="s1-t6" name="H02 Select New Twnnant H02">
+<kw name="SelectNewTennant" library="General">
+<kw name="Click Menu icon" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_drawer']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.463" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.463" starttime="20201119 10:55:41.457"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.465" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.466" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.466" starttime="20201119 10:55:41.451"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.467" starttime="20201119 10:55:41.450"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.467" starttime="20201119 10:55:41.450"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:55:41.467" critical="yes" starttime="20201119 10:55:41.449">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</status>
+</test>
+<test id="s1-t7" name="Select text&amp;voice input method">
+<kw name="Click Menu icon" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.FrameLayout[@resource-id='${appPackage}:id/bottom_nav_drawer']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.490" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.490" starttime="20201119 10:55:41.480"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.492" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.499" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.499" starttime="20201119 10:55:41.470"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.499" starttime="20201119 10:55:41.469"></status>
+</kw>
+<tags>
+<tag>Android</tag>
+<tag>NR</tag>
+</tags>
+<status status="FAIL" endtime="20201119 10:55:41.499" critical="yes" starttime="20201119 10:55:41.468">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</status>
+</test>
+<test id="s1-t8" name="Populate history">
+<kw name="Input text in history" library="General">
+<arguments>
+<arg>Quelle est la température dans Berlin ?</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.EditText[@resource-id='${appPackage}:id/et_user_input']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.551" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.551" starttime="20201119 10:55:41.537"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.553" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.554" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.554" starttime="20201119 10:55:41.501"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.554" starttime="20201119 10:55:41.501"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.554" critical="yes" starttime="20201119 10:55:41.500">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</status>
+</test>
+<test id="s1-t9" name="HD01 Long press on a conversation item + Delete button">
+<kw name="Long click conversation item" library="General">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=//android.widget.TextView[@resource-id='${appPackage}:id/text_response_tv_message']</arg>
+<arg>30s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20201119 10:55:41.628" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.628" starttime="20201119 10:55:41.568"></status>
+</kw>
+<msg timestamp="20201119 10:55:41.630" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.631" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<status status="FAIL" endtime="20201119 10:55:41.631" starttime="20201119 10:55:41.556"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.632" starttime="20201119 10:55:41.556"></status>
+</kw>
+<status status="FAIL" endtime="20201119 10:55:41.632" critical="yes" starttime="20201119 10:55:41.555">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</status>
+</test>
+<status status="FAIL" endtime="20201119 10:55:41.634" starttime="20201119 10:55:20.658"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="8" pass="1">Critical Tests</stat>
+<stat fail="8" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="6" pass="1">Android</stat>
+<stat fail="5" pass="1">NR</stat>
+</tag>
+<suite>
+<stat fail="8" id="s1" name="AndroidPhoneTests" pass="1">AndroidPhoneTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20201119 10:55:41.268" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.290" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.366" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.445" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.465" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.492" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.553" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+<msg timestamp="20201119 10:55:41.630" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: connect ECONNREFUSED 127.0.0.1:8203
+</msg>
+</errors>
+</robot>
